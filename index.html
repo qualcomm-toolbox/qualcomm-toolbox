@@ -1,6 +1,247 @@
-<h1>Hello, World!</h1>
-<div align="center">
-  <img src="https://github-readme-stats-fast.vercel.app/api?username=qualcomm-toolbox&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" height="150" alt="stats graph"/>
-  <br>
-  <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=qualcomm-toolbox&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=5&theme=dracula&hide_border=false" height="150" alt="languages graph"/>
-</div>
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qualcomm-toolbox • 高通工具箱</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        
+        :root {
+            --dracula-bg: #282a36;
+            --dracula-fg: #f8f8f2;
+            --dracula-comment: #6272a4;
+            --dracula-purple: #bd93f9;
+            --dracula-cyan: #8be9fd;
+            --dracula-pink: #ff79c6;
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .glass {
+            background: rgba(40, 42, 54, 0.85);
+            backdrop-filter: blur(12px);
+        }
+
+        .repo-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .repo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 
+                       0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .stat-img {
+            filter: drop-shadow(0 10px 15px rgba(189, 147, 249, 0.3));
+        }
+    </style>
+</head>
+<body class="bg-[#1e1e2e] text-[#f8f8f2] min-h-screen">
+    <!-- Navigation -->
+    <nav class="border-b border-[#44475a] bg-[#282a36]/80 backdrop-blur-md fixed w-full z-50">
+        <div class="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="w-9 h-9 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center text-white font-bold text-xl">Q</div>
+                <div>
+                    <span class="heading-font text-2xl font-semibold tracking-tighter">qualcomm-toolbox</span>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-x-8 text-sm">
+                <a href="#about" class="hover:text-[#bd93f9] transition-colors">About</a>
+                <a href="#projects" class="hover:text-[#bd93f9] transition-colors">Projects</a>
+                <a href="#stats" class="hover:text-[#bd93f9] transition-colors">Stats</a>
+                <a href="https://github.com/qualcomm-toolbox" target="_blank" 
+                   class="flex items-center gap-x-2 bg-[#44475a] hover:bg-[#6272a4] px-5 py-2.5 rounded-2xl transition-all">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="h-20"></div>
+
+    <!-- Hero -->
+    <header class="max-w-6xl mx-auto px-6 pt-16 pb-20 flex flex-col items-center text-center">
+        <div class="w-32 h-32 rounded-3xl overflow-hidden border-4 border-[#bd93f9] mb-8 shadow-2xl">
+            <img src="https://avatars.githubusercontent.com/u/qualcomm-toolbox" 
+                 onerror="this.src='https://via.placeholder.com/128/6272a4/ffffff?text=QT'" 
+                 alt="Profile" class="w-full h-full object-cover">
+        </div>
+        
+        <h1 class="heading-font text-6xl font-bold tracking-tighter mb-3">
+            qualcomm-toolbox
+        </h1>
+        <p class="text-[#bd93f9] text-xl mb-2">高通工具箱</p>
+        
+        <div class="max-w-md text-[#a0a0b0] mt-6 text-lg leading-relaxed">
+            Mysterious individual. Rarely sleeps. Pings the servers at 3 AM. 
+            Probably powered by some mysterious power.
+        </div>
+
+        <div class="flex gap-x-6 mt-10">
+            <div class="flex items-center gap-x-2 bg-[#282a36] px-6 py-3 rounded-3xl border border-[#44475a]">
+                <span class="text-emerald-400">●</span>
+                <span class="text-sm">UTC+02:00</span>
+            </div>
+            <a href="http://office-works.ch" target="_blank" 
+               class="flex items-center gap-x-2 bg-[#282a36] px-6 py-3 rounded-3xl border border-[#44475a] hover:border-[#bd93f9] transition-colors">
+                <i class="fas fa-globe"></i>
+                <span>office-works.ch</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section id="stats" class="max-w-6xl mx-auto px-6 py-16">
+        <div class="text-center mb-12">
+            <h2 class="heading-font text-4xl font-semibold mb-3">GitHub Activity</h2>
+            <p class="text-[#a0a0b0]">Stats &amp; Language Breakdown</p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-8">
+            <div class="glass border border-[#44475a] rounded-3xl p-8 shadow-xl">
+                <img src="https://github-readme-stats-fast.vercel.app/api?username=qualcomm-toolbox&hide_title=false&hide_rank=false&show_icons=true&include_all_commits=true&count_private=true&disable_animations=false&theme=dracula&locale=en&hide_border=false" 
+                     class="stat-img rounded-2xl" height="200" alt="GitHub Stats">
+            </div>
+            
+            <div class="glass border border-[#44475a] rounded-3xl p-8 shadow-xl">
+                <img src="https://github-readme-stats-fast.vercel.app/api/top-langs?username=qualcomm-toolbox&locale=en&hide_title=false&layout=compact&card_width=320&langs_count=8&theme=dracula&hide_border=false" 
+                     class="stat-img rounded-2xl" height="200" alt="Top Languages">
+            </div>
+        </div>
+    </section>
+
+    <!-- Pinned Projects -->
+    <section id="projects" class="max-w-6xl mx-auto px-6 py-16 bg-[#282a36]">
+        <div class="flex items-end justify-between mb-12">
+            <div>
+                <h2 class="heading-font text-4xl font-semibold">Pinned Projects</h2>
+                <p class="text-[#a0a0b0]">Featured work from the toolbox</p>
+            </div>
+            <a href="https://github.com/qualcomm-toolbox?tab=repositories" target="_blank"
+               class="text-[#bd93f9] hover:underline flex items-center gap-x-2 text-sm">
+                View all repositories 
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Specs -->
+            <div class="repo-card bg-[#1e1e2e] border border-[#44475a] rounded-3xl overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <i class="fas fa-microchip text-[#ff79c6] text-2xl"></i>
+                        <div class="font-medium text-lg">Specs</div>
+                    </div>
+                    <p class="text-[#a0a0b0] line-clamp-3 mb-8">
+                        A Java application that displays information about your PC's hardware.
+                    </p>
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-x-1.5">
+                            <span class="w-3 h-3 bg-[#f1e05a] rounded-full"></span>
+                            <span>Java</span>
+                        </div>
+                        <div class="flex items-center gap-x-5 text-[#a0a0b0]">
+                            <span><i class="fas fa-star"></i> 2</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-2 bg-gradient-to-r from-yellow-400 to-orange-500"></div>
+                <a href="https://github.com/qualcomm-toolbox/Specs" target="_blank"
+                   class="block text-center py-5 text-[#bd93f9] hover:bg-[#282a36] transition-colors text-sm font-medium">
+                    View Repository →
+                </a>
+            </div>
+
+            <!-- Aurora Music Widget -->
+            <div class="repo-card bg-[#1e1e2e] border border-[#44475a] rounded-3xl overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <i class="fas fa-music text-[#8be9fd] text-2xl"></i>
+                        <div class="font-medium text-lg">Aurora-Music-Widget</div>
+                    </div>
+                    <p class="text-[#a0a0b0] line-clamp-3 mb-8">
+                        Music Widget For Linux
+                    </p>
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-x-1.5">
+                            <span class="w-3 h-3 bg-[#3572a5] rounded-full"></span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-2 bg-gradient-to-r from-cyan-400 to-blue-500"></div>
+                <a href="https://github.com/qualcomm-toolbox/Aurora-Music-Widget" target="_blank"
+                   class="block text-center py-5 text-[#bd93f9] hover:bg-[#282a36] transition-colors text-sm font-medium">
+                    View Repository →
+                </a>
+            </div>
+
+            <!-- Amethyst Music -->
+            <div class="repo-card bg-[#1e1e2e] border border-[#44475a] rounded-3xl overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-x-3 mb-6">
+                        <i class="fas fa-database text-[#ff79c6] text-2xl"></i>
+                        <div class="font-medium text-lg">Amethyst-Music</div>
+                    </div>
+                    <p class="text-[#a0a0b0] line-clamp-3 mb-8">
+                        A fork of Purple Music that uses MySQL instead of SQLite.
+                    </p>
+                    <div class="flex items-center justify-between text-sm">
+                        <div class="flex items-center gap-x-1.5">
+                            <span class="w-3 h-3 bg-[#4f5b93] rounded-full"></span>
+                            <span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-2 bg-gradient-to-r from-pink-400 to-purple-500"></div>
+                <a href="https://github.com/qualcomm-toolbox/Amethyst-Music" target="_blank"
+                   class="block text-center py-5 text-[#bd93f9] hover:bg-[#282a36] transition-colors text-sm font-medium">
+                    View Repository →
+                </a>
+            </div>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="https://github.com/qualcomm-toolbox?tab=repositories" target="_blank"
+               class="inline-flex items-center gap-x-3 bg-[#bd93f9] hover:bg-[#caa3ff] text-[#282a36] font-semibold px-8 py-4 rounded-3xl transition-all">
+                <i class="fab fa-github"></i>
+                Explore All Repositories
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1a1a2e] py-16 border-t border-[#44475a]">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-x-8 text-3xl mb-8 text-[#6272a4]">
+                <a href="https://github.com/qualcomm-toolbox" target="_blank" class="hover:text-[#bd93f9] transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-[#bd93f9] transition-colors"><i class="fab fa-x-twitter"></i></a>
+            </div>
+            
+            <p class="text-[#6272a4] text-sm">
+                Made with <span class="text-red-400">♥</span> and mysterious powers • 
+                <span class="text-[#a0a0b0]">qualcomm-toolbox</span>
+            </p>
+            <p class="text-[#6272a4] text-xs mt-2">© 2026 • Not affiliated with Qualcomm Inc.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already included via CDN
+        console.log("%cqualcomm-toolbox profile page ready 🚀", "color: #bd93f9; font-family: monospace;");
+    </script>
+</body>
+</html>
